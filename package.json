@@ -1,5 +1,5 @@
 {
-  "name": "barber-shop-project",
+  "name": "barber-shop-practice",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url=/barber-shop-project/",
+    "predeploy": "npm run build -- --public-url=/barber-shop-practice/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
