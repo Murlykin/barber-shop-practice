@@ -1,0 +1,116 @@
+.form {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.form-wrap {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 30px;
+}
+
+.form-field:first-child {
+  @media screen and (min-width: $tablet) {
+    margin-right: 30px;
+  }
+}
+
+.form-input {
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  color: $white-text-color;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $footer-modal-text;
+  font-family: inherit;
+  font-size: 16px;
+  transition: border-color 250ms $timing-function;
+}
+
+.form-input:focus,
+.form-input:hover {
+  border-color: $white-text-color;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: $footer-modal-text;
+  transition: top 250ms $timing-function, left 250ms $timing-function, transform 250ms $timing-function,
+    color 250ms $timing-function;
+}
+
+.form-input:focus + .form-label,
+.form-input:hover + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -4px;
+  transform: translateY(-100%);
+  color: $white-text-color;
+}
+
+.form-input:valid {
+  outline-color: green;
+}
+
+.form-input:invalid {
+  outline-color: red;
+}
+
+.form-textarea + .form-label {
+  top: 16px;
+  left: 0;
+}
+
+.form-textarea {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 80px;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid $footer-modal-text;
+  background-color: transparent;
+  outline: none;
+  font-family: inherit;
+  color: $white-text-color;
+  transition: border-color 250ms $timing-function;
+}
+
+.form-textarea:focus,
+.form-textarea:hover {
+  border-color: $white-text-color;
+}
+
+.form-link {
+  color: $white-text-color;
+  text-decoration: underline;
+}
+
+.form-textarea:focus + .form-label,
+.form-textarea:hover + .form-label,
+.form-textarea:not(:placeholder-shown) + .form-label {
+  top: -4px;
+  transform: translateY(-100%);
+  color: $white-text-color;
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto;
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+  }
+}

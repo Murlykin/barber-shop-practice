@@ -1,0 +1,134 @@
+.menu {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    padding-top: 8px;
+    align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-button.is-open .menu-icon {
+    fill: $primary-bgc;
+  }
+
+  .nav-button {
+    display: inline-flex;
+    margin-left: auto;
+    margin-top: 8px;
+    margin-top: 8px;
+    z-index: 5;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .nav-button.is-open {
+    position: fixed;
+    right: 30px;
+  }
+
+  .menu.is-open {
+    position: fixed;
+  }
+
+  .nav-button .menu-icon-close {
+    display: none;
+  }
+
+  .nav-button.is-open .menu-icon-close {
+    display: block;
+  }
+
+  .nav-button.is-open .menu-icon-open {
+    display: none;
+    color: $primary-bgc;
+  }
+
+  .menu {
+    opacity: 0;
+    position: absolute;
+    z-index: 4;
+    top: -40px;
+    right: -1px;
+    width: 70%;
+    height: 100%;
+    background-color: $white-text-color;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 20px;
+    border-top: 1px solid #ececec;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+  }
+
+  .menu.is-open {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    fill: white;
+  }
+
+  .menu.is-open .nav {
+    margin-top: 20px;
+  }
+
+  .menu.is-open .contacts {
+    margin-top: 64px;
+  }
+
+  .menu.is-open .pseudo-socials {
+    margin-top: 64px;
+    text-align: left;
+  }
+
+  .menu.is-open .pseudo-socials-link {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    letter-spacing: 0.2em;
+    color: $black-text-color;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      transition: $timing-function;
+    }
+  }
+  .menu.is-open .pseudo-socials-item:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
+
+  .menu.is-open .pseudo-socials-list {
+    @media screen and (max-width: 479px) {
+      padding-left: 80px;
+    }
+
+    padding-left: 100px;
+    position: relative;
+  }
+
+  .menu.is-open .pseudo-socials-list::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background-color: $black-text-color;
+    left: 0;
+    top: 20px;
+  }
+}

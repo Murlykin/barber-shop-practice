@@ -1,0 +1,109 @@
+.about {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.image-wrapper {
+  width: 50%;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.about-gallery {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+
+    width: 330px;
+    height: 235px;
+
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    width: 270px;
+    height: 445px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.about-block {
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 65px;
+  }
+}
+
+.section-title.about {
+  font-size: 28px;
+  line-height: 1.17;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 42px;
+    line-height: 1.16;
+  }
+}
+
+.about-item.text {
+  padding-left: 34px;
+}
+
+.about-desc {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: $main-text-color;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 1.66;
+  }
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  margin-top: 0;
+  color: $main-text-color;
+}

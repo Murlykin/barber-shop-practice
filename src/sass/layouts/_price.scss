@@ -1,0 +1,91 @@
+.price {
+  background-color: $primary-bgc;
+  background-image: url(../images/price/bg-png-mob.png), linear-gradient(to right, $primary-bgc, $primary-bgc);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    background-image: url(../images/price/price-tel@2x.png);
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    background-image: url(../images/price/bg-png-tablet.png), linear-gradient(to right, $primary-bgc, $primary-bgc);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/price/price-tablet@2x.png);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/price/bg-png-desctop.png), linear-gradient(to right, $primary-bgc, $primary-bgc);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../images/price/price-img@2x.png);
+    }
+  }
+}
+
+.price-content {
+  color: $secondary-grey-color;
+}
+
+.price-item {
+  display: flex;
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.decor {
+  flex: 1;
+  width: 100%;
+  border-bottom: 1px solid $underscore;
+}
+
+.price-title {
+  margin-bottom: 44px;
+  line-height: 1.1666;
+}
+
+.price-list {
+  position: relative;
+  padding: 30px;
+  margin-bottom: 50px;
+  z-index: 1;
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+  @media screen and (min-width: $desktop) {
+    padding: 30px 40px;
+    height: 242px;
+    column-count: 2;
+    column-gap: 80px;
+    background-image: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+    background-size: 50% 100%;
+  }
+}
+
+.price-list::before {
+  @media screen and (min-width: $desktop) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    width: 50%;
+    height: 100%;
+  }
+}

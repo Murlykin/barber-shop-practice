@@ -1,0 +1,174 @@
+.container-hero {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 680px;
+  padding-bottom: 40px;
+  padding-top: 60px;
+  background-color: $primary-bgc;
+  background-image: url(../../src/images/header/header-tel@1x.jpg),
+    linear-gradient(to right, $primary-bgc, $primary-bgc);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 0;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/header/header-tel@2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    background-image: url(../images/header/header-tablet-2@1x.jpg),
+      linear-gradient(to right, $primary-bgc, $primary-bgc);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/header/header-tablet-2@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/header/header@1x.jpg), linear-gradient(to right, $primary-bgc, $primary-bgc);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/header/header@2x.jpg);
+    }
+  }
+}
+
+.hero-main-content {
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $white-text-color;
+
+  @media screen and (max-width: 479px) {
+    max-width: 250px;
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: calc(#{$desktop} - 1px)) {
+    max-width: 305px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    margin-left: 220px;
+    max-width: 355px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 250px;
+    max-width: 500px;
+  }
+}
+
+.hero-title {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: $white-text-color;
+
+  @media screen and (max-width: 479px) {
+    font-size: 39px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 72px;
+    line-height: 1.18;
+  }
+}
+
+.hero-subtitle {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: $secondary-grey-color;
+  font-size: 12px;
+  line-height: 1.62;
+
+  @media screen and (max-width: 479px) {
+    font-size: 11px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 420px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+  }
+}
+
+.hero .section-description {
+  color: $header-price-text;
+   @media screen and (max-width: 479px) {
+    font-size: 9px;
+  }
+}
+
+.hero-social-list {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  transform: rotate(-90deg) scaleX(-1);
+  width: 30px;
+}
+
+.hero-social-item {
+  padding: 0px 20px;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.hero-social-link {
+  display: block;
+  transform: scaleX(-1);
+  transition: $timing-function;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: $black-text-color;
+
+  &:hover {
+    color: $accent-color;
+    transition: $timing-function;
+  }
+}
+
+.hero-social-list:first-of-type::before {
+  content: "";
+
+  position: absolute;
+  top: -143%;
+  left: 50px;
+  display: inline-block;
+  width: 1px;
+  height: 60px;
+  background: $black-text-color;
+  transform: rotate(90deg) translateX(50%) translateY(-50%);
+}

@@ -1,0 +1,59 @@
+.contact {
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (min-width: $desktop) {
+    width: 640px;
+  }
+
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: $secondary-grey-color;
+
+  background-image: url(../images/footer/footer-480@1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .box {
+      background-image: url(../images/footer/footer-480@2x.jpg);
+    }
+  }
+  @media screen and (min-width: $mobile) {
+    background-image: url(../images/footer/footer-768@1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .box {
+        background-image: url(../images/footer/footer-768@2x.jpg);
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/footer/footer-1600@1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .box {
+        background-image: url(../images/footer/footer-1600@2x.jpg);
+      }
+    }
+  }
+}
+
+.contact-container {
+  @media screen and (min-width: $desktop) {
+    padding: 0 100px;
+  }
+}
+
+.contact-position {
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    display: flex;
+  }
+}

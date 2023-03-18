@@ -1,0 +1,128 @@
+.feature-container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row-reverse;
+  }
+}
+
+.feature-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.feature-item:nth-child(2) {
+  margin-top: 35px;
+}
+
+.feature-item:nth-child(2n + 1) {
+  margin-top: -35px;
+}
+
+.feature-item:first-child {
+  margin-top: 0px;
+}
+
+.feature-item {
+  width: calc(100% / 2);
+  max-width: 223px;
+  padding: 15px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 240px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 200px;
+  }
+}
+
+.feature-position {
+  width: 100%;
+  height: 133px;
+  padding: 20px 25px;
+  background-color: $section-bgc;
+
+  @media screen and (max-width: 350px) {
+    padding: 20px 10px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 20px 35px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 20px 18px;
+  }
+}
+
+.feature-number {
+  position: relative;
+  display: block;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.feature-number::after {
+  content: " ";
+  position: absolute;
+  top: 25%;
+  width: 13px;
+  height: 22px;
+  background-image: url(../images/svg/plus.svg);
+  background-repeat: no-repeat;
+}
+
+.feature-words {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+}
+
+.feature-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.feature-block-first {
+  margin-bottom: 44px;
+
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    max-width: 500px;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 500px;
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
+}
+
+.feature-block-second {
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    max-width: 450px;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 370px;
+    margin-top: -9px;
+    margin-right: 130px;
+  }
+}

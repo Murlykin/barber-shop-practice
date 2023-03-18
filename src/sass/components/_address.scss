@@ -1,0 +1,46 @@
+.address {
+  font-style: normal;
+  margin-bottom: 40px;
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    margin-bottom: 0;
+  }
+}
+
+.address-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  fill: transparent;
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.address-link {
+  display: flex;
+  align-items: center;
+  color: $secondary-grey-color;
+  stroke: $secondary-grey-color;
+}
+
+.address-link--line {
+  text-decoration: underline;
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: $accent-color;
+  stroke: $accent-color;
+}
+
+.working-hours {
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    margin-right: 90px;
+    margin-left: auto;
+  }
+}
+
+.working-hours-text {
+  margin: 0;
+}

@@ -1,0 +1,14 @@
+body {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.66;
+  letter-spacing: 0.02em;
+  color: $black-text-color;
+  outline: none;
+}
+
+body.modal-open {
+  overflow: hidden;
+}

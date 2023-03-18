@@ -1,0 +1,47 @@
+.cards {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  margin: -$tab-size;
+  padding: 0;
+  list-style: none;
+}
+
+.cards--flex {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.cards-item {
+  padding: $tab-size;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet) {
+    width: calc(100% / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc(100% / 3);
+  }
+}
+
+.cards-item--second {
+  @media screen and (min-width: $tablet) {
+    width: calc(100% / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc(100% / 4);
+  }
+}
+
+.cards-item- {
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    width: 480px;
+  }
+}

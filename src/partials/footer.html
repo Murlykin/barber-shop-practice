@@ -1,0 +1,71 @@
+<footer class="footer">
+  <div class="footer-container">
+    <!-- <include src="./partials/form-footer.html"></include> -->
+    <div class="section container modal">
+      <h2 class="section-title section-title--white footer-title">Онлайн-запис</h2>
+      <form class="form">
+        <div class="form-wrap">
+          <div class="form-field">
+            <input type="text" pattern="^[А-Яа-яЁё\s]+$" class="form-input" name="name" id="name" placeholder=" " />
+            <label for="name" class="form-label" id="name">ім'я*</label>
+          </div>
+          <div class="form-field">
+            <input type="tel" pattern="[0-9]{5,10}" class="form-input" name="tel" id="tel" placeholder=" " />
+            <label for="tel" class="form-label">телефон*</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <textarea class="form-textarea" name="comment" id="comment" placeholder=" "></textarea>
+          <label for="comment" class="form-label">повідомлення</label>
+        </div>
+        <button type="submit" class="form-button button">Відправити</button>
+      </form>
+    </div>
+
+    <!-- <include src="./partials/contacts.html"></include> -->
+    <div id="contacts" class="section contact">
+      <div class="container contact-container">
+        <h2 class="section-title section-title--white footer-title">Контакти</h2>
+        <div class="contact-position">
+          <address class="address">
+            <ul class="address-list">
+              <li class="address-item">
+                <a href="https://goo.gl/maps/E6VXYdxXRcgQzx9s5" target="_blank" class="address-link">
+                  <svg class="address-icon">
+                    <use href="./images/sprite.svg#icon-location"></use>
+                  </svg>
+                  <span>
+                    вул. Василькова, 7А
+                    <br />
+                    Київ, 08132
+                  </span>
+                </a>
+              </li>
+              <li class="address-item">
+                <a href="tel:+380441111111" class="address-link">
+                  <svg class="address-icon">
+                    <use href="./images/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <span>+38 044 111 11 11</span>
+                </a>
+              </li>
+              <li class="address-item">
+                <a href="mailto:info@devstudio.com" class="address-link address-link--line">
+                  <svg class="address-icon">
+                    <use href="./images/sprite.svg#icon-mail"></use>
+                  </svg>
+                  <span>barbershop@email.com</span>
+                </a>
+              </li>
+            </ul>
+          </address>
+          <div class="working-hours">
+            <p class="section-description section-discription--white">час роботи</p>
+            <p class="working-hours-text">Щоденно з 9:00 до 22:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <include src="./partials/copyright.html"></include> -->
+</footer>

@@ -1,0 +1,62 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="backdrop-row">
+    <div class="modal">
+      <button class="close-modal-button" type="submit" data-modal-close>
+        <svg class="close-icon" width="11" height="11">
+          <use href="./images/sprite.svg#menu-icon-close"></use>
+        </svg>
+      </button>
+
+      <form class="form" autocomplete="off">
+        <p class="modal-text">Залишіть свої дані, ми вам передзвонимо</p>
+
+        <div role="group">
+          <div class="form-field">
+            <input type="text" name="user-name" id="name" class="form-input" placeholder=" " />
+            <label for="name" class="label-title">Ім'я</label>
+
+            <svg class="modal-svg" width="18" height="18">
+              <!-- <use href="./images/symb.svg#icon-person-modal"> </use> -->
+            </svg>
+          </div>
+
+          <div class="form-field">
+            <input type="tel" name="user-telefone" id="tel" class="form-input" placeholder=" " />
+            <label for="tel" class="label-title">Телефон</label>
+            <svg class="modal-svg" width="18" height="18">
+              <!-- <use href="./images/symb.svg#icon-phone-modal"> </use> -->
+            </svg>
+          </div>
+
+          <div class="form-field">
+            <input type="email" name="user-email" id="email" class="form-input" placeholder=" " />
+            <label for="email" class="label-title">Пошта</label>
+            <svg class="modal-svg" width="18" height="18">
+              <!-- <use href="./images/symb.svg#icon-email-modal"> </use> -->
+            </svg>
+          </div>
+
+          <div class="form-field">
+            <textarea class="comment" name="comment" id="comment" rows="10" placeholder=" "></textarea>
+            <label for="comment" class="comment-label">Коментар</label>
+          </div>
+
+          <div class="checkbox-container">
+            <label class="check-box-text">
+              <input class="checkbox" type="checkbox" name="" value="check" name="Policy" value="Policy" />
+
+              <span class="checkbox-icon"></span>
+
+              <span>
+                Погоджуюся з розсилкою та приймаю
+                <a href="">Умови договору</a>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <button class="button modal-button" data-modal-close>Відправити</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.footer {
+  background-color: #191c26;
+}
+
+.footer-container {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    max-width: $desktop;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer-title {
+  margin-bottom: 40px;
+}
+
+.modal {
+  width: 100%;
+  @media screen and (min-width: $desktop) {
+    width: 640px;
+  }
+}

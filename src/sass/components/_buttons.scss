@@ -1,0 +1,40 @@
+.button {
+  cursor: pointer;
+  min-width: 160px;
+  height: 40px;
+  border: none;
+  padding: 12px 20px;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $white-text-color;
+  outline: none;
+  transition: $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    transition: $timing-function;
+  }
+}
+
+.button--white {
+  background-color: $white-text-color;
+  color: $black-text-color;
+  transition: $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-text-color;
+    transition: $timing-function;
+  }
+}
+
+.price-button-box {
+  text-align: center;
+}

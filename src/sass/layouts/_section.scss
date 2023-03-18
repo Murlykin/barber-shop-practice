@@ -1,0 +1,71 @@
+.section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
+.section-title {
+  font-family: $title-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16521;
+  letter-spacing: 0.05em;
+  color: $black-text-color;
+}
+
+.section-title--white {
+  color: $white-text-color;
+}
+
+.section-description {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: 80px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $black-text-color;
+}
+
+.section-description::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -80px;
+
+  display: inline-block;
+  margin-right: 20px;
+  width: 60px;
+  height: 1px;
+  background-color: $black-text-color;
+}
+
+.section-discription--gray {
+  color: $header-price-text;
+}
+
+.section-discription--white {
+  color: $white-text-color;
+}
+
+.section-discription--gray::before {
+  background: $header-price-text;
+}
+
+.section-discription--white::before {
+  background: $footer-modal-text;
+}

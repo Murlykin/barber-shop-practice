@@ -1,0 +1,44 @@
+
+// Стилі для файлу з прикладом HTML-фрагменту
+@import "./utils/normalize.scss";
+@import "./utils/variables";
+@import "./utils/breakpoints";
+@import "./layouts/base";
+
+// службові
+@import "./utils/visually-hidden";
+@import "./utils/img";
+@import "./utils/wrap";
+@import "./utils/backdrop";
+
+// допоміжне
+@import "./layouts/section";
+@import "./layouts/container";
+@import "./components/social";
+@import "./components/cards";
+
+// Основа
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/about-us";
+@import "./layouts/price";
+@import "./layouts/feature";
+@import "./layouts/masters";
+@import "./layouts/gallery";
+@import "./layouts/footer";
+
+// components
+@import "./components/logo";
+@import "./components/menu-mob";
+@import "./components/dots";
+@import "./components/slider-button";
+@import "./components/contacts";
+@import "./components/buttons";
+@import "./components/aside";
+@import "./components/text";
+@import "./components/social";
+@import "./components/modal";
+@import "./components/form-footer";
+@import "./components/address";
+@import "./components/copyright";
+@import "./components/social-text";

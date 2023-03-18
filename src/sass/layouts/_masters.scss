@@ -1,0 +1,44 @@
+.master-section {
+  background: $section-bgc;
+}
+
+.section-description.black-color {
+  color: $black-text-color;
+}
+
+.masters-title {
+  margin-bottom: 44px;
+}
+
+.masters-wrap {
+  height: 346px;
+  width: 100%;
+}
+
+.master-name {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: $black-text-color;
+}
+
+.master-specialist {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.master-information {
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  color: $accent-color;
+}
