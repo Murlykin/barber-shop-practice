@@ -71,6 +71,7 @@ npm run build
 "predeploy": "npm run build -- --public-url='/имя_репозитория/'"
 ```
 
+
 После чего в терминале выполнить следующую команду.
 
 ```shell
