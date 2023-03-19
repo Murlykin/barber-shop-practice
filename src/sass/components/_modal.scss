@@ -1,140 +1,229 @@
+body.modal-open {
+  overflow: hidden;
+}
+
+.backdrop {
+  z-index: 10000;
+}
+
 .modal {
   position: relative;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: black;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
-  transform: translateY(0);
+  box-shadow: 0px 2px 1px rgba(212, 161, 161, 0.2),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 40px;
+  background: $color-footer-background;
+
+  @media screen and (max-width: 399px) {
+    width: 280px;
+    height: 510px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 400px) {
+    width: 360px;
+    height: 470px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 50%;
+    left: 50%;
+    margin: 0px;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    width: 450px;
+    height: 500px;
+  }
 }
 
-.is-hidden .modal {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.8s;
-  transform: translateY(-150%);
+.form {
+  &.js-speaker-form {
+    @media screen and (min-width: 768px) {
+      position: relative;
+    }
+  }
 }
 
-.close-modal-button {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.modal-svg {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-
-}
-
-.modal .modal-text {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+.form-title {
+  display: block;
   text-align: center;
-  letter-spacing: 0.03em;
-  margin-top: 0px;
-  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
 }
 
 .form-field {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
   margin-bottom: 28px;
 }
 
-.form-input:focus + .label-title,
-.form-input:not(:placeholder-shown) + .label-title {
-  transform: translateY(-40px);
-  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+.form-field {
+  &:nth-child(5) {
+    margin-bottom: 20px;
+  }
 }
 
-.label-title {
+.form-label {
   position: absolute;
   top: 50%;
-  left: 42px;
-  transform: translateY(-50%);
-  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  left: 12px;
+  transform: translate(0%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
 }
 
-.comment-label {
+.form-textarea {
+  position: relative;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  height: 120px;
+  padding: 12px;
+  outline: none;
+
+  background-color: $color-footer-background;
+  color: $color-pale;
+
+  @media screen and (max-width: 399px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 400px) {
+    width: 280px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 370px;
+  }
+}
+
+.textarea-label {
   position: absolute;
   top: 12px;
-  left: 16px;
+  left: 12px;
+  margin: 0;
 
-  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
 }
 
-.form .comment {
-  width: 100%;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
+.form-textarea {
+  &:focus + .textarea-label,
+  &:not(:placeholder-shown) + .textarea-label {
+    transform: translateY(-30px);
+    color: $color-accent;
+  }
+}
+
+.form-textarea {
+  &:focus {
+    border-color: $color-accent;
+  }
+}
+
+.form-input {
+  margin: 0;
   padding-top: 12px;
   padding-bottom: 12px;
-}
+  padding-left: 12px;
+  height: 40px;
 
-.comment:focus + .comment-label,
-.comment:not(:placeholder-shown) + .comment-label {
-  transform: translateY(-35px);
-  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  box-sizing: border-box;
 
-.form-field input {
-  width: 100%;
-  margin: 0;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.checkbox-container {
-  margin-bottom: 20px;
-  display: inline-block;
-  position: relative;
-}
-
-.checkbox-icon {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  top: 50%;
-  left: 2px;
-  transform: translateY(-50%);
-
-  border-radius: 4px;
-}
-
-.checkbox:checked ~ .checkbox-icon {
-  background-size: contain;
-  background-origin: border-box;
-
-}
-
-.check-box-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  padding-left: 24px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  background-color: $color-footer-background;
+  color: white;
+  outline: none;
+
+  @media screen and (max-width: 399px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 400px) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 370px;
+  }
 }
 
-.checkbox {
-  margin-bottom: 30px;
+.form-input {
+  &:focus + .form-label,
+  &:not(:placeholder-shown) + .form-label {
+    transform: translate(0px, -40px);
+    color: $color-accent;
+  }
 }
 
-.modal-button {
-  margin: auto;
+.form-input {
+  &:focus {
+    border-color: $color-accent;
+  }
+}
+
+.submit-button {
+  @extend %btn;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: $color-footer-background;
+  color: $color-pale;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0px;
+  padding-top: 3px;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  border-radius: 50%;
+  border: 1px solid $color-accent;
+  background-color: $color-footer-background;
+  fill: $color-pale;
+}
+
+.close-button {
+  &:hover,
+  &:focus {
+    fill: $color-accent;
+  }
 }

@@ -1,0 +1,92 @@
+@mixin transition(
+  $prop: all,
+  $time: 250ms,
+  $cube: cubic-bezier(0.4, 0, 0.2, 1),
+  $delay: 0ms
+) {
+  transition-property: #{$prop};
+  transition-duration: #{$time};
+  transition-timing-function: #{$cube};
+  transition-delay: #{$delay};
+}
+
+%btn {
+  @include transition(background-color);
+  padding: 12px 19px;
+  border: 1px solid $color-accent;
+
+  border-radius: 25px;
+
+  font-family: $font-main-text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $color-pale;
+    background-color: $color-accent;
+  }
+
+  &--on-pale {
+    color: $color-basic;
+  }
+  &--on-dark {
+    color: $color-pale;
+  }
+}
+
+%section {
+  @media screen and (max-width: 767px) {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+  
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
+%section-title {
+  display: inline-flex;
+  align-items: center;
+  color: $color-basic;
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+  text-decoration: none;
+  font-family: $font-main-text;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+
+    background-color: $color-basic;
+    border-radius: 4px;
+  }
+}
+
+%second-section-titles {
+  font-family: $font-titles;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+}

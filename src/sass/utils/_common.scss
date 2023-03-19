@@ -1,0 +1,64 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body  {
+  font-family: $font-main-text, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+
+  @media screen and (min-width: $viewport-breakpoint-1) {
+    width: 480px;
+  }
+  
+  @media screen and (min-width: $viewport-breakpoint-2) {
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  @media screen and (min-width: $viewport-breakpoint-3) {
+    width: 1280px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}

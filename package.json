@@ -25,9 +25,5 @@
     "parcel-bundler": "^1.12.4",
     "posthtml-include": "^1.4.3",
     "sass": "^1.26.9"
-  },
-  "dependencies": {
-    "react-scripts": "^5.0.1",
-    "vanilla-back-to-top": "^7.2.1"
   }
 }

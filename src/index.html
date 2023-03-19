@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/28bcaeddfd.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>BarberShop</title>
+  </head>
+  <body>
+    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
-    rel="stylesheet" />
-  <title>BarberShop</title>
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-</head>
+    <include src="./partials/header.html"></include>
 
-<body>
-
-  <include src="./partials/header.html"></include>
-
-  <main>
-    <include src="./partials/hero.html"></include>
     <include src="./partials/about-us.html"></include>
-    <include src="./partials/price.html"></include>
-    <include src="./partials/feature.html"></include>
-    <include src="./partials/masters.html"></include>
-    <include src="./partials/gallery.html"></include>
-  </main>
 
-  <include src="./partials/footer.html"></include>
-  <include src="./partials/copyright.html"></include>
-  <include src="./partials/backdrop.html"></include>
-  <include src="./partials/modal.html"></include>
-  <script src="./index.js"></script>
-  <script src="./js/menu.js"></script>
-  <script src="./js/back-drop.js"></script>
-  <script src="./js/button-up.js"></script>
-</body>
+    <include src="./partials/services-and-prices.html"></include>
 
+    <include src="./partials/advantages.html"></include>
+
+    <include src="./partials/team.html"></include>
+
+    <include src="./partials/portfolio.html"></include>
+
+    <include src="./partials/footer.html"></include>
+
+    <include src="./partials/modal.html"></include>
+
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+
+    <script src="./js/slider.js"></script>
+    <script src="./js/btn-upp.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./index.js"></script>
+  </body>
 </html>
