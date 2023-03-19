@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://murlykin.github.io/barber-shop-practice/"
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://murlykin.github.io/barber-shop-practice/"
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
@@ -27,6 +27,7 @@
     "sass": "^1.26.9"
   },
   "dependencies": {
+    "react-scripts": "^5.0.1",
     "vanilla-back-to-top": "^7.2.1"
   }
 }
