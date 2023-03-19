@@ -398,11 +398,7 @@ p {
   letter-spacing: 0.05em;
 }
 
-body {
-  min-width: 320px;
-}
-
-@media screen and (max-width: 421px) {
+@media screen and (max-width: 480px) {
   .menu-is-open .logo-barbershop {
     color: #303030;
   }
@@ -417,7 +413,7 @@ body {
     background: #ffffff;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-is-open {
     overflow: hidden;
   }
@@ -472,7 +468,7 @@ body {
   width: 69px;
   height: 56px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .logo-barbershop {
     color: #ffffff;
   }
@@ -500,7 +496,7 @@ body {
   letter-spacing: 0.05em;
   color: #ffffff;
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
   .title-greatest {
     font-size: 40px;
   }
@@ -572,7 +568,7 @@ body {
 .menu-mobile-toggle.is-open .icon-menu {
   display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-mobile-toggle {
     display: block;
   }
@@ -581,12 +577,11 @@ body {
 .menu-mobile-container {
   z-index: 2;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-mobile-container {
     position: absolute;
     top: 0;
     right: 0;
-    display: none;
     width: calc((100% - 143px) - (100% - 480px) / 2);
     height: 100vh;
     padding: 40px;
@@ -599,17 +594,17 @@ body {
     overflow-y: auto;
   }
 }
-@media screen and (max-width: 767px) and (max-width: 420px) {
+@media screen and (max-width: 768px) and (max-width: 480px) {
   .menu-mobile-container.is-open {
     width: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-mobile-container-element:not(:last-child) {
     margin-bottom: 64px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-mobile-container [class$=-item] {
     margin-bottom: 24px;
   }
@@ -617,7 +612,7 @@ body {
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .menu-mobile-container .page-social {
     flex-direction: column;
   }
@@ -643,7 +638,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .page-header-row {
     align-items: center;
   }
@@ -653,7 +648,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .page-header-contacts {
     min-height: 89px;
   }
@@ -682,7 +677,7 @@ body {
 .page-header-button {
   background-color: transparent;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .page-header-button {
     padding-left: 36px;
     padding-right: 36px;
@@ -705,6 +700,7 @@ body {
     bottom: 0;
     transform-origin: top left;
     transform: translateY(100%) rotate(-90deg);
+    border: none;
     width: 680px;
     height: calc(159px + (100vw - 768px) / 2);
     background-color: #ffffff;
@@ -733,7 +729,7 @@ body {
 .site-nav {
   display: flex;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .site-nav {
     flex-direction: column;
   }
@@ -813,7 +809,7 @@ body {
   width: 100%;
   height: 100%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .slider {
     height: 580px;
   }
@@ -959,37 +955,6 @@ body {
   color: #555555;
 }
 
-.btnEntrance {
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-name: btnEntrance;
-}
-
-@keyframes btnEntrance {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-.btnExit {
-  animation-duration: 0.25s;
-  animation-fill-mode: both;
-  animation-name: btnExit;
-}
-
-@keyframes btnExit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-}
 .section {
   font-family: "Open Sans", sans-serif;
   scroll-snap-align: center;
