@@ -1,9 +1,5 @@
-body {
-  min-width: 320px;
-}
-
 .menu-is-open {
-  @media screen and (max-width: $viewport-breakpoint-1 - 59) {
+  @media screen and (max-width: $viewport-breakpoint-1) {
     .logo-barbershop {
       color: $color-basic;
     }
@@ -19,7 +15,7 @@ body {
       background: $color-pale;
     }
   }
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (max-width: $viewport-breakpoint-2) {
     overflow: hidden;
   }
 }
@@ -34,27 +30,23 @@ body {
   @extend %accent-hover;
 
   display: block;
-
   font-family: $font-main-text;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.09em;
   text-decoration: none;
-
   color: $color-basic;
 
   @media screen and (min-width: $viewport-breakpoint-2) {
     font-size: 12px;
     line-height: 1.34;
-
     color: $color-pale;
   }
 }
 
 .container-for-header {
   position: relative;
-
   min-height: 580px;
 
   @media screen and (min-width: $viewport-breakpoint-2) {
@@ -76,7 +68,7 @@ body {
   width: 69px;
   height: 56px;
 
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (max-width: $viewport-breakpoint-2) {
     color: $color-pale;
   }
   @media screen and (min-width: $viewport-breakpoint-2) {
@@ -101,7 +93,7 @@ body {
 
   color: $color-pale;
 
-  @media screen and (max-width: $viewport-breakpoint-1 - 1) {
+  @media screen and (max-width: $viewport-breakpoint-1) {
     font-size: 40px;
   }
 
@@ -182,7 +174,7 @@ body {
     display: none;
   }
 
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (max-width: $viewport-breakpoint-2) {
     display: block;
   }
 }
@@ -190,32 +182,23 @@ body {
 .menu-mobile-container {
   z-index: 2;
 
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (max-width: $viewport-breakpoint-2) {
     position: absolute;
     top: 0;
     right: 0;
-
-    // @include transition(transform);
-    // transform: translateX(101%);
-    display: none;
-
     width: calc((100% - 143px) - (100% - 480px) / 2);
     height: 100vh;
-
     padding: 40px;
     padding-top: 118px;
-
     background-color: $color-pale;
     box-shadow: -1px 0px 3px rgba(0, 0, 0, 0.16),
       -2px 0px 4px rgba(0, 0, 0, 0.08), -4px 0px 8px rgba(0, 0, 0, 0.04);
 
     &.is-open {
-      // transform: translateX(0);
       display: block;
-
       overflow-y: auto;
 
-      @media screen and (max-width: $viewport-breakpoint-1 - 60) {
+      @media screen and (max-width: $viewport-breakpoint-1) {
         width: 100%;
       }
     }
@@ -253,7 +236,7 @@ body {
   &-row {
     display: flex;
     justify-content: space-between;
-    @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+    @media screen and (max-width: $viewport-breakpoint-2) {
       align-items: center;
     }
   }
@@ -263,7 +246,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
-    @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+    @media screen and (max-width: $viewport-breakpoint-2) {
       min-height: 89px;
     }
     @media screen and (min-width: $viewport-breakpoint-2) {
@@ -288,7 +271,7 @@ body {
     @extend %btn;
 
     background-color: transparent;
-    @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+    @media screen and (max-width: $viewport-breakpoint-2) {
       padding-left: 36px;
       padding-right: 36px;
     }
@@ -307,7 +290,7 @@ body {
       bottom: 0;
       transform-origin: top left;
       transform: translateY(100%) rotate(-90deg);
-
+border: none;
       width: 680px;
       height: calc(159px + (100vw - 768px) / 2);
 
@@ -341,7 +324,7 @@ body {
 .site-nav {
   display: flex;
 
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (max-width: $viewport-breakpoint-2) {
     flex-direction: column;
   }
 
@@ -369,7 +352,6 @@ body {
   z-index: 1;
   top: 112px;
   pointer-events: none;
-
   max-width: 306px;
 
   @media screen and (min-width: $viewport-breakpoint-2) {
@@ -420,12 +402,9 @@ body {
   width: 100%;
   height: 100%;
 
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (max-width: $viewport-breakpoint-2) {
     height: 580px;
   }
-  // @media screen and (max-width: $viewport-breakpoint-2 - 1) {
-  //   height: 680px;
-  // }
 
   button {
     background-color: transparent;
@@ -469,12 +448,10 @@ body {
     margin-bottom: 40px;
     margin-right: 39px;
     color: $color-pale;
-
     user-select: none;
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
-
     text-align: right;
     letter-spacing: 0.1em;
     border-bottom: 1px solid;
@@ -558,36 +535,3 @@ body {
   color: $color-text-on-pale;
 }
 
-// Анимация для кнопки поднятия вверх
-.btnEntrance {
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-name: btnEntrance;
-}
-
-@keyframes btnEntrance {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.btnExit {
-  animation-duration: 0.25s;
-  animation-fill-mode: both;
-  animation-name: btnExit;
-}
-
-@keyframes btnExit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-}
