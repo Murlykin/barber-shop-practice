@@ -187,7 +187,6 @@
     top: 0;
     right: 0;
     width: calc((100% - 143px) - (100% - 480px) / 2);
-    height: 100vh;
     padding: 40px;
     padding-top: 118px;
     background-color: $color-pale;
@@ -221,12 +220,13 @@
   }
   @media screen and (min-width: $viewport-breakpoint-2) {
     display: flex;
+    padding: 0 6px;
   }
   @media screen and (min-width: $viewport-breakpoint-3) {
     flex-grow: 1;
     justify-content: space-between;
     height: 40px;
-    padding-left: 32px;
+    padding: 0 32px;
   }
 }
 
@@ -292,7 +292,7 @@
       transform: translateY(100%) rotate(-90deg);
 border: none;
       width: 680px;
-      height: calc(159px + (100vw - 768px) / 2);
+      height: calc(1px + (100vw - 768px) / 2);
 
       background-color: $color-pale;
 
@@ -310,11 +310,11 @@ border: none;
     }
 
     @media screen and (min-width: $viewport-breakpoint-3) {
-      height: calc(155px + (100vw - 1280px) / 2);
+      height: calc(85px + (100vw - 1280px) / 2);
 
       .page-social {
         position: absolute;
-        top: calc(80px + (100vw - 1280px) / 2);
+        top: calc(0px + (100vw - 1280px) / 2);
         transform: translateY(0);
       }
     }
@@ -431,10 +431,10 @@ border: none;
   width: 100%;
 
   @media screen and (min-width: 768px) {
-    right: calc((100vw - 768px) / 2 + 39px);
+    right: calc((95vw - 768px) / 2 );
   }
   @media screen and (min-width: 1280px) {
-    right: calc((100vw - 1280px) / 2 + 55px);
+    right: calc((95vw - 1280px) / 2);
   }
   .prev,
   .next {
@@ -489,10 +489,10 @@ border: none;
     display: none;
   }
   @media screen and (min-width: 768px) {
-    right: calc((100vw - 768px) / 2 + 39px);
+    right: calc((85vw - 768px) / 2 );
   }
   @media screen and (min-width: 1280px) {
-    right: calc((100vw - 1280px) / 2 + 55px);
+    right: calc((85vw - 1280px) / 2);
   }
 
   .line {
@@ -512,26 +512,5 @@ border: none;
   }
 }
 
-//Кнопка поднятия вверх страницы
-#myBtn {
-  @include transition(color);
-  display: none;
-  position: fixed;
-  bottom: 30px;
-  right: 10px;
-  z-index: 99;
-  font-size: 25px;
 
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: $color-accent;
-  cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  color: $color-text-on-pale;
-}
 
