@@ -1375,7 +1375,7 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .team {
-    padding: 130px 0px 130px 0px;
+    padding: 60px 0px 130px 0px;
   }
 }
 .team-subtitle {
