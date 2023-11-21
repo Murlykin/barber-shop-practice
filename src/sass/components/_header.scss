@@ -67,6 +67,7 @@
   display: inline-block;
   width: 69px;
   height: 56px;
+  
 
   @media screen and (max-width: $viewport-breakpoint-2) {
     color: $color-pale;
@@ -77,6 +78,7 @@
   }
   @media screen and (min-width: $viewport-breakpoint-3) {
     left: 0px;
+    
   }
 }
 

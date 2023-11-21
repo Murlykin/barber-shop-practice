@@ -41,7 +41,7 @@ p {
   padding-top: 0;
   padding-bottom: 0;
 
-  @media screen and (max-width: $viewport-breakpoint-2 - 1) {
+  @media screen and (max-width: $viewport-breakpoint-2 ) {
     padding-left: 31px;
     padding-right: 31px;
   }
@@ -52,13 +52,13 @@ p {
   
   @media screen and (min-width: $viewport-breakpoint-2) {
     width: 768px;
-    padding-left: 39px;
+    padding-left: 19px;
     padding-right: 39px;
   }
 
   @media screen and (min-width: $viewport-breakpoint-3) {
     width: 1280px;
-    padding-left: 55px;
-    padding-right: 55px;
+    // padding-left: 55px;
+    // padding-right: 55px;
   }
 }
